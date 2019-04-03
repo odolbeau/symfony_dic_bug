@@ -1,0 +1,6 @@
+services:
+    App\Storage\Storage: '@App\Storage\CacheStorage'
+
+    App\Storage\CacheStorage:
+        autowire: false
+        arguments: ['@App\Storage\DBStorage', '@cache.app']
